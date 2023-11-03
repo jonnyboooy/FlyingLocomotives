@@ -123,7 +123,7 @@ def update(dt):
         key_vector[1] = 0
         key_vector[2] = 0
 
-    # qqqqq.clear()
+    sprites.clear()
 
     for item in players:
 
