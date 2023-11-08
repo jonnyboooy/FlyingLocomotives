@@ -131,13 +131,13 @@ def update(dt):
 
         # отрисуем точки касания
         for touch_point in list(data['points']):
-            sprites.append(shapes.Circle(touch_point[0], touch_point[1], 3, color=item.train.color, batch=batch))
+            sprites.append(shapes.Circle(touch_point.x, touch_point.y, 3, color=touch_point.color, batch=batch))
 
         for line in data["lines"]:
-            sprites.append(shapes.Line(*line[0], *line[1], 3, color=(255, 0, 0), batch=batch))
+            sprites.append(shapes.Line(*line.start.point, *line.end.point, 3, color=line.color, batch=batch))
 
         for circle in data["circles"]:
-            sprites.append(shapes.Arc(circle[0][0], circle[0][1], circle[1], color=(255, 0, 0), batch=batch))
+            sprites.append(shapes.Arc(circle.center.x, circle.center.y, circle.radius, color=circle.color, batch=batch))
 
     space.step(dt)
 
