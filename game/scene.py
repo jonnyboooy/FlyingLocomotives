@@ -64,24 +64,36 @@ class Scene:
         segment_shape_right.friction = 1.0
         space.add(segment_shape_right)
 
-        circle_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
-        circle_body_1.position = 300, 300
-        circle_shape_1 = pymunk.Circle(circle_body_1, 50)
-        circle_shape_1.body = circle_body_1
-        space.add(circle_shape_1, circle_body_1)
+        ###################
+        # Дефолтная сцена #
+        ###################
+        # circle_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
+        # circle_body_1.position = 300, 300
+        # circle_shape_1 = pymunk.Circle(circle_body_1, 50)
+        # circle_shape_1.body = circle_body_1
+        # space.add(circle_shape_1, circle_body_1)
+        #
+        # circle_body_2 = pymunk.Body(body_type=pymunk.Body.STATIC)
+        # circle_body_2.position = 500, 500
+        # circle_shape_2 = pymunk.Circle(circle_body_2, 70)
+        # circle_shape_2.body = circle_body_2
+        # space.add(circle_shape_2, circle_body_2)
+        #
+        # box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
+        # box_body_1.position = 1000, 400
+        # box_shape_1 = pymunk.Poly.create_box(box_body_1, (70, 200))
+        # box_shape_1.body = box_body_1
+        # space.add(box_shape_1, box_body_1)
+        #
+        # box_body_2 = pymunk.Body(body_type=pymunk.Body.STATIC)
+        # box_body_2.position = 800, 100
+        # box_shape_2 = pymunk.Poly.create_box(box_body_2, (300, 50))
+        # box_shape_2.body = box_body_2
+        # space.add(box_shape_2, box_body_2)
 
-        circle_body_2 = pymunk.Body(body_type=pymunk.Body.STATIC)
-        circle_body_2.position = 500, 500
-        circle_shape_2 = pymunk.Circle(circle_body_2, 70)
-        circle_shape_2.body = circle_body_2
-        space.add(circle_shape_2, circle_body_2)
-
-        box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
-        box_body_1.position = 1000, 400
-        box_shape_1 = pymunk.Poly.create_box(box_body_1, (70, 200))
-        box_shape_1.body = box_body_1
-        space.add(box_shape_1, box_body_1)
-
+        ###################
+        # Кастомная сцена #
+        ###################
         # box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
         # box_body_1.position = 300, 200
         # box_shape_1 = pymunk.Poly.create_box(box_body_1, (200, 300))
@@ -89,23 +101,16 @@ class Scene:
         # box_shape_1.body.angle = 45
         # space.add(box_shape_1, box_body_1)
         #
-        # box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
-        # box_body_1.position = 485, 500
-        # box_shape_1 = pymunk.Poly.create_box(box_body_1, (200, 300))
-        # box_shape_1.body = box_body_1
+        box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
+        box_body_1.position = 485, 400
+        box_shape_1 = pymunk.Poly.create_box(box_body_1, (200, 300))
+        box_shape_1.body = box_body_1
         # box_shape_1.body.angle = 45
-        # space.add(box_shape_1, box_body_1)
-
-        # box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
-        # box_body_1.position = 400, 300
-        # box_shape_1 = pymunk.Poly.create_box(box_body_1, (200, 300))
-        # box_shape_1.body = box_body_1
-        # box_shape_1.body.angle = 45
-        # space.add(box_shape_1, box_body_1)
-
+        space.add(box_shape_1, box_body_1)
         #
-        box_body_2 = pymunk.Body(body_type=pymunk.Body.STATIC)
-        box_body_2.position = 800, 100
-        box_shape_2 = pymunk.Poly.create_box(box_body_2, (300, 50))
-        box_shape_2.body = box_body_2
-        space.add(box_shape_2, box_body_2)
+        # box_body_1 = pymunk.Body(body_type=pymunk.Body.STATIC)
+        # box_body_1.position = 250, 300
+        # box_shape_1 = pymunk.Poly.create_box(box_body_1, (200, 300))
+        # box_shape_1.body = box_body_1
+        # box_shape_1.body.angle = 45
+        # space.add(box_shape_1, box_body_1)

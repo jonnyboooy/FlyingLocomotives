@@ -27,7 +27,7 @@ class Player:
 
     def __init__(self, *,
                  space: pymunk.Space,
-                 position: tuple[float],
+                 position: tuple[float, float],
                  angle: float,
                  name: str = "Unknown Train",
                  color: tuple[int] = (0, 0, 255)
@@ -92,7 +92,7 @@ class Player:
 
     def make_query(self, query: namedtuple):
         if query:
-            return self.space.segment_query_first(query.point0, query.point1, 1, pymunk.ShapeFilter())
+            return self.space.segment_query_first(query.point0, query.start, 1, pymunk.ShapeFilter())
 
     def update(self) -> dict[str, list]:
         # запрашиваем локатор

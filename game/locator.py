@@ -2,7 +2,7 @@ from math import sin, cos
 from collections import namedtuple
 from typing import Any
 
-LocatorQuery = namedtuple('LocatorQuery', ['position', 'point0', 'point1'])
+LocatorQuery = namedtuple('LocatorQuery', ['position', 'point0', 'start'])
 
 
 class Locator:
